@@ -1,0 +1,33 @@
+<div class="post-preview post-preview-index">
+    <a href="<%- url_for(post.path) %>">
+        <h2 class="post-title">
+            <%- post.title || theme.default_post_title || "Untitled" %>
+        </h2>
+        <% if (post.subtitle && post.subtitle.length) { %>
+            <h3 class="post-subtitle">
+                <%- post.subtitle %>
+            </h3>
+        <% } %>
+    </a>
+    <p class="post-meta mb-1">
+        <!-- Date and Author -->
+        <% if(post.author) { %>
+            Posted by <%- post.author %> on
+        <% } %>
+        <%- post.date.format(config.date_format) %>
+    </p>
+
+        <% if (post.tags && post.tags.length){ %>
+        <p class=" mt-3 mb-3">    
+            <%
+                var tags = [];
+                post.tags.forEach(function(tag){
+                    tags.push('<a href="' + config.root + tag.path + '" id="' + tag.name + '" class="btn btn-primary">' + tag.name + '</a>');
+                });
+            %>
+        
+            <%- tags.join(' ') %>
+        </p>
+        <% } %>
+</div>
+<hr>

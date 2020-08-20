@@ -1,0 +1,14 @@
+<!-- Search script -->
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#searchModal").on("shown.bs.modal", function () {
+      $(this).find("#searchInput").focus();
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(function () {
+    searchFunc("/" + "search.xml", "searchInput", "searchResult");
+  });
+</script>
