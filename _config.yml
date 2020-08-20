@@ -5,12 +5,12 @@
 menu_title: 
 
 # URL of the Home page image
-index_cover: /img/home-bg.jpg
+index_cover: /img/home-bg.webp
 
 # Set your own favicon
 favicon: /img/favicon.png
 
-logo: /img/flogo.png
+logo: /img/flogo.webp
 
 # Site start year
 # Default with current year
@@ -33,7 +33,7 @@ post_info:
 # Enable post mathjax render
 mathjax:
   enable: false
-  cdn: //cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js
 
 # Comments. Choose one by filling up the information
 comments:
